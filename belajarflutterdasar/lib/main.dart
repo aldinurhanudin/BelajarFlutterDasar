@@ -7,7 +7,7 @@ void main() => runApp(MaterialApp(
       centerTitle: true,
     ),
     body: Center(
-      child: Text('Hello Zayn'),
+      child: Text('Hello Zayn malik'),
     ),
     floatingActionButton: FloatingActionButton(
       onPressed: () {  },
