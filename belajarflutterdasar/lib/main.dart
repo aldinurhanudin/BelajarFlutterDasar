@@ -17,18 +17,43 @@ class Home extends StatelessWidget {
         // akhir
       ),
       body: Center(
-          // images
-          //untuk manggil image di assets
-          // child: Image(
-          //   image: AssetImage('assets/beauty.jpg'),
-          //akhir untuk manggil image di assets
-          // Manggil dari network
-          child: Image.network(
-              'https://images.unsplash.com/photo-1657214663963-5030959d77d7?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80')
-          // akhir dari network
-          // ),
-          // akhir images
-          ),
+        // icon
+        // child: Icon(
+        //   Icons.airport_shuttle,
+        //   color: Colors.lightBlue,
+        //   size: 50.0,
+        // ),
+        // akhir icon
+
+        // button flat button
+        // child: FlatButton(
+        //   onPressed: () {
+        //     print('you clicked me');
+        //   },
+        //   child: Text('click me'),
+        //   color: Colors.lightBlue,
+        // ),
+        // akhir flatbutton
+
+        //  Button raisedbutton
+        // child: RaisedButton.icon(
+        //   onPressed: () {},
+        //   icon: Icon(Icons.mail),
+        //   label: Text('mail me'),
+        //   color: Colors.amber,
+        // ),
+         // akhir button raisedbutton
+
+        //  button iconButton
+        child: IconButton(
+          onPressed: () {
+            print('you clicked me');
+          },
+          icon: Icon(Icons.alternate_email),
+          color: Colors.amber,
+        ),
+        // akhir iconButton
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         child: Text('click me'),
