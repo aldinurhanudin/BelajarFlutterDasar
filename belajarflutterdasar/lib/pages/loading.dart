@@ -12,7 +12,6 @@ class _LoadingState extends State<Loading> {
 
     final response = await http.get(url);
     Map data = jsonDecode(response.body);
-    //print(data);
 
     // get properties from json
     String datetime = data['datetime'];
