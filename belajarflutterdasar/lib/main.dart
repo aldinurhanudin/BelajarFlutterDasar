@@ -15,20 +15,14 @@ class _QuoteListState extends State<QuoteList> {
     Quote(
       author: 'Osca Wilde',
       text: 'Be yourself, everyone else is already taken',
-      'I have nothing to declare except my genius',
-      'The truth is rarely pure and necer simple',
     ),
     Quote(
       author: 'Osca Wilde',
       text: 'Be yourself, everyone else is already taken',
-      'I have nothing to declare except my genius',
-      'The truth is rarely pure and necer simple',
     ),
     Quote(
       author: 'Osca Wilde',
       text: 'Be yourself, everyone else is already taken',
-      'I have nothing to declare except my genius',
-      'The truth is rarely pure and necer simple',
     ),
   ];
   @override
@@ -49,11 +43,4 @@ class _QuoteListState extends State<QuoteList> {
       ),
     );
   }
-}
-
-class Qoute {
-  String? text;
-  String? author;
-
-  Qoute({required String this.text, required String this.author});
 }
