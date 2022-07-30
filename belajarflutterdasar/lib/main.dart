@@ -1,65 +1,91 @@
 import 'package:flutter/material.dart';
 
 void main() => runApp(MaterialApp(
-      home: Home(),
+      home: NinjaCard(),
     ));
 
-// Statlesswidget
-class Home extends StatelessWidget {
+class NinjaCard extends StatelessWidget {
+  const NinjaCard({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.grey[900],
       appBar: AppBar(
-        title: Text('my first App'),
+        title: Text('Ninja Id Card'),
         centerTitle: true,
-        // colours
-        backgroundColor: Colors.red[600],
-        // akhir
+        backgroundColor: Colors.grey[650],
+        elevation: 0.0,
       ),
-      // Awal Columns
-      body: Row(
-        children: <Widget>[
-          // awal Expanded
-          Expanded(
-            child: Image.asset('assets/beauty.jpg'),
-            flex: 3,
-          ),
-          Expanded(
-            flex: 3, //buat ukuran widgetnya
-            child: Container(
-              padding: EdgeInsets.all(30.0),
-              color: Colors.cyan,
-              child: Text('1'),
+      body: Padding(
+        padding: EdgeInsets.fromLTRB(30.0, 40.0, 30.0, 0.0),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Center(
+              child: CircleAvatar(
+                backgroundImage: AssetImage('assets/beauty.jpg'),
+                radius: 40.0,
+              ),
             ),
-          ),
-          Expanded(
-            flex: 2,
-            child: Container(
-              padding: EdgeInsets.all(30.0),
-              color: Colors.pinkAccent,
-              child: Text('2'),
+            Divider(
+              height: 90.0,
+              color: Colors.grey[800],
             ),
-          ),
-          Expanded(
-            flex: 1,
-            child: Container(
-              padding: EdgeInsets.all(30.0),
-              color: Colors.amber,
-              child: Text('3'),
+            Text(
+              'Name',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0,
+              ),
             ),
-          ),
-          // akhir expanded
-        ],
-      ),
-      // akhir columns
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        child: Text('click me'),
-        // colours
-        backgroundColor: Colors.red[600],
-        // akhir
+            SizedBox(height: 10.0),
+            Text(
+              'Chun-Li',
+              style: TextStyle(
+                  color: Colors.amberAccent[200],
+                  letterSpacing: 2.0,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 30.0),
+            Text(
+              'CURRENT NINJA LEVEL',
+              style: TextStyle(
+                color: Colors.grey,
+                letterSpacing: 2.0,
+              ),
+            ),
+            SizedBox(height: 10.0),
+            Text(
+              '8',
+              style: TextStyle(
+                  color: Colors.amberAccent[200],
+                  letterSpacing: 2.0,
+                  fontSize: 20.0,
+                  fontWeight: FontWeight.bold),
+            ),
+            SizedBox(height: 30.0),
+            Row(
+              children: [
+                Icon(
+                  Icons.email,
+                  color: Colors.grey[400],
+                ),
+                SizedBox(width: 10.0),
+                Text(
+                  'chun.li@theninja.co.uk',
+                  style: TextStyle(
+                    color: Colors.grey[400],
+                    fontSize: 10.0,
+                    letterSpacing: 1.0,
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
       ),
     );
-    // Akhir statlesswidget
   }
 }
