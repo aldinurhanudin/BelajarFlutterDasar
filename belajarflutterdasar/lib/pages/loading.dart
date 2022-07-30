@@ -9,7 +9,8 @@ class Loading extends StatefulWidget {
 
 class _LoadingState extends State<Loading> {
   void getData() async {
-   Response response = await get('https://jsonplaceholder.typicode.com/todos/1');
+   var response = await http.get(Uri.parse('https://jsonplaceholder.typicode.com/todos/1'));
+ 
     // print(response.body);
    Map data =jsonDecode(response.body);
    print(data);
