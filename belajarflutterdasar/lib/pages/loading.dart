@@ -6,16 +6,17 @@ class Loading extends StatefulWidget {
 }
 
 class _LoadingState extends State<Loading> {
-
   void getTime() async {
     // make the request
-    Response response = await get('http://worldtimeapi.org/api/timezone/Europe/London');
+    var url = Uri.parse('http://worldtimeapi.org/api/timezone/Europe/London');
+
+    final response = await http.get(url);
     Map data = jsonDecode(response.body);
     //print(data);
 
     // get properties from json
     String datetime = data['datetime'];
-    String offset = data['utc_offset'].substring(1,3);
+    String offset = data['utc_offset'].substring(1, 3);
     //print(datetime);
     //print(offset);
 
